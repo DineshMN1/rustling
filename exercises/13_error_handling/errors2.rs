@@ -21,9 +21,15 @@ fn total_cost(item_quantity: &str) -> Result<i32, ParseIntError> {
     let cost_per_item = 5;
 
     // TODO: Handle the error case as described above.
-    let qty = item_quantity.parse::<i32>();
-
+    let qty = item_quantity.parse::<i32>()?;
     Ok(qty * cost_per_item + processing_fee)
+    // another way of approach 
+    // match qty {
+    //     Ok(n) => (qty * cost_per_item + processing_fee)
+    //     Err(e) => (e)
+    // }
+
+
 }
 
 fn main() {

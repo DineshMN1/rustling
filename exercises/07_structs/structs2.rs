@@ -38,7 +38,7 @@ mod tests {
         let your_order = Order {
             name: String::from("Hacker in Rust"),
             count: 1,
-            ..order_template,
+            ..order_template
         };
         
 
